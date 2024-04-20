@@ -34,8 +34,8 @@ int top(Stack *stack)
 int isEmpty(Stack *stack)
 {
     if(stack->top==-1)
-        return 0;
-    return 1;
+        return 1;
+    return 0;
 }
 
 void freeStack(Stack *stack)
