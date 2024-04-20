@@ -1,4 +1,4 @@
-class Stack:        #stworzenie struktury stosu
+class Stack:                # stworzenie struktury stosu
     def __init__(self):
         self.stack = list()
 
@@ -19,20 +19,20 @@ class Stack:        #stworzenie struktury stosu
 
 if __name__ == "__main__":
 
-    n = int(input())        #liczba bloków
+    n = int(input())        # liczba bloków
 
-    widths = list()         #długości bloków - niepotrzebne
-    heights = list()        #wysokości bloków
+    widths = list()         # długości bloków - niepotrzebne
+    heights = list()        # wysokości bloków
 
-    for i in range(n):      #czytanie wartości
+    for i in range(n):      # czytanie wartości
         data = input().split()
         widths.append(data[0])
         heights.append(data[1])
 
-    stack_of_buildings = Stack()        #stos przechowujący bloki
-    minimum_number_of_posters = 0       #liczba potrzebnych plakatów
+    stack_of_buildings = Stack()        # stos przechowujący bloki
+    minimum_number_of_posters = 0       # liczba potrzebnych plakatów
 
-    for i in range(n):                  #implementacja pseudoalgorytmu
+    for i in range(n):                  # implementacja pseudoalgorytmu
         while (not stack_of_buildings.isEmpty() and heights[stack_of_buildings.top()] > heights[i]):
             stack_of_buildings.pop()
         if (stack_of_buildings.isEmpty() or heights[i] > heights[stack_of_buildings.top()]):
